@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #025D9F;
+}
+.container{
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #07276A;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.img{
+  padding-top: 10px;
+  background-color: #07276A;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  grid-column-gap: 10px;  
+} 
+
+.left,
+.middle,
+.right {
+  padding: 5px;
+  /* height: 100%; Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+/* barra de navegação */
+.nav-bar{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FDB000;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    height: 70px;
+}
+ul.topnav li {
+    float: left;
+}
+ul.topnav li a {
+    display: block;
+    color: #025D9F;
+    text-align: center;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 17px;
+}
+ul.topnav li a:hover:not(.active) {
+    background-color: #111;
+}
+ul.topnav li a.active {
+    background-color: #fff;
+}
+ul.topnav li.right {
+    float: right;
+}
+@media screen and (max-width: 600px) {
+      ul.topnav li.right, 
+      ul.topnav li {float: none;}
+}
+/* barra de navegação  */
+
+/* footer */
+/* footer */
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contato{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+
+.img-telefone img{
+  width: 50px;
+}
+
+.img-endereco img{
+  width: 50px;
+}
+/*
+.img-telefone p{
+  float: right;
+  padding-right: 420px;
+  padding-top: 90px;
+}
+
+.img-endereco p{
+  float: right;
+  padding-right: 220px;
+  padding-top: 40px;
+}*/
+/* FORMULARIO */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row{
+  background-color: #025D9F;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.section-sobre{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background-color: #fff;
+  height: 600px;
+}
+.info-contato{
+  padding: 1rem;
+}
+
+.info-contato-label{
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.mapa{
+  margin-top: 1rem;
+}
+
+.item-contato{
+  display: flex;
+  align-items: center;
+}
+.item-contato img{
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+}
+
+.item-contato{
+  display: flex;
+  align-items: center;
+}
+
+.item-contato img{
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+}
