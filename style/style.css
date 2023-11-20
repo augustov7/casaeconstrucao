@@ -25,6 +25,7 @@ body {
 .img{
   padding-top: 10px;
   background-color: #07276A;
+  width: 100%;
 }
 
 /* The grid container */
@@ -68,6 +69,7 @@ body {
     position: -webkit-sticky; 
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 ul.topnav {
@@ -85,7 +87,7 @@ ul.topnav li {
 }
 ul.topnav li a {
     display: block;
-    color: #025D9F;
+    color: #07276A;
     text-align: center;
     
     text-decoration: none;
@@ -131,12 +133,21 @@ ul.topnav li.right {
 }
 
 .section-ofertas-cards{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card-ofertas{
   padding: 1rem;
   border-radius: 1rem;
+}
+
+.section-carousel{  
+  display: none;
+}
+
+.carousel{
+  width: 40%;
 }
 
 
@@ -212,7 +223,7 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
+.container-form {
   border-radius: 5px;
 }
 
@@ -239,11 +250,7 @@ input[type=submit]:hover {
   clear: both;
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
-}
+
 
 .produto-title{
   color: #fff;
@@ -306,6 +313,9 @@ input[type=submit]:hover {
 
 .sobre-img {
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sobre-img img {
@@ -317,7 +327,6 @@ input[type=submit]:hover {
   display: grid;
   grid-template-columns: 45% 55%;
   background-color: #fff;
-  height: 600px;
   border-radius: 1rem;
 }
 .info-contato{
@@ -354,3 +363,65 @@ input[type=submit]:hover {
   color: #F00;
  }
  
+ @media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+
+  .img img{
+    width: 90%;
+  }
+  .carousel{
+    width: 90%;
+  }
+  .section-ofertas{
+    display: none;
+  }
+  .section-carousel{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-ofertas-cards{
+    grid-template-columns: 1fr;
+  }
+  .section-divulgacao{
+    grid-template-columns: 1fr;
+    margin: 1rem;    
+  }
+  .divulgacao-texto{
+    font-size: medium;
+  }
+  .section-sobre{
+    grid-template-columns: 1fr;
+  }
+  .section-contato{
+    grid-template-columns: 1fr;
+  }
+  .section-contato::after{
+    content: '';
+    display: block;
+    background-color: #FDB000;
+    height: 3rem;
+  }
+  iframe{
+    width: 300px;
+  }
+  .info-contato{
+    font-size: large;
+  }
+  .container-form::before{
+    content: '';
+    display: block;
+    background-color: #FDB000;
+    height: .2rem;
+  }
+  .col-25 {
+    width: 100%;
+  }
+  .col-75 {
+    width: 100%;
+  }
+
+  
+}
